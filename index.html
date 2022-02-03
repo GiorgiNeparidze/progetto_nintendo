@@ -4,90 +4,364 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="icon" href="http://www.nintendo.com/apps/noa/images/favicon.ico?v=2022012117">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <title>Homepage</title>
 </head>
+
+
+
+<style>
+
+    :root {
+        --pippo: green;
+        font-family: 'Nunito', sans-serif;
+        color: #484848;
+
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    ::before, ::after,
+    div, p, h1, h2, h3, h4, h5, h6,
+    span, ul, li {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .uppermenu-cnt {
+        /* flex-basis: 100px; */
+        align-items: center;
+        display: flex;
+    }
+    
+    #search-cnt{
+         flex-grow: 1;
+    }
+
+    nav { /* diventa nav*/
+        /* background-color: indianred; */
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        top: 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .uppermenu, .bottomenu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .uppermenu {
+        height: 60px;
+    }
+
+    #links-right span {
+        margin: 10px;
+        font-weight: bold;
+    }
+
+    .bottomenu {
+        /* background-color: lightseagreen; */
+        border-top: 1px solid #ddd;
+    }
+
+    .search-box{
+        width: 100%;
+        /* background-color: khaki; */
+    }
+
+    input {
+        margin: 5px;
+        max-width: 500px;
+        width: 40%;
+    }
+
+    .dropdown-btn {
+        display: inline-block;
+        position: relative;
+        margin: 0 10px;
+        /* background-color: lightsalmon; */
+        padding: 5px 10px;
+        transition: all 0.5s ease;
+        font-weight: bold;
+    }
+
+   /* .dropdown-btn:hover {
+        color: red;
+    }*/
+    .dropdown:focus-within .submenu-cnt{
+        display: flex;
+        justify-content: center;
+    }
+
+    .dropdown:focus-within .arrow-down{
+        transform: rotate(180deg);
+    }
+
+    .submenu-cnt {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-top: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .sub-item {
+        margin:  5px 8px;
+        padding: 20px 40px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .arrow-down {
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform 0.5s ease;
+       /* transform: rotate(180deg);*/
+    }
+
+    img {
+        max-width: 100%;
+        /*height: 100%;*/
+    }
+
+    #logo img {
+        width: 150px;
+        height: 72px; 
+    }
+
+    #logo {
+        width: 150px;
+        overflow: hidden;
+
+    }
+
+    .main-img{
+        background-image: url(/assets/Ncom_1366x493_desktop_pkmn_arceus.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+        margin-top: 90px;
+        margin-bottom: 80px;
+    }
+
+    .banner {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .btn-cnt {
+        background-color: #E60012;
+        padding: 10px 40px;
+        border-radius: 10px;
+        margin-left: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-cnt:hover {
+        transform:scale(1.1);
+        background-color: rgb(187, 43, 43);
+    }
+
+    .btn {
+        color: white;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    .tiles-cnt {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .tile-cnt {
+        margin: 20px;
+        flex-basis: 200px;
+        flex-grow: 1;
+    }
+
+    .tiles-cnt img {
+        border-radius: 6px;
+        border: 1px solid #ddd;
+    }
+
+    .tiles-cnt h3 {
+        font-size: 1.3em;
+    }
+
+    hr {
+        margin: 50px 100px;
+        border: none;
+        border-bottom: 1px solid;
+        border-color: #ccc ;
+    }
+
+    .subtitle {
+        margin-top: 20px;
+    }
+
+    .subtitle span {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E60012;
+    }
+
+</style>
+
 <body>
     <header>
             <nav>
-                <div>
-                    <span><a href="#home">Nintendo</a></span>
-                    <span><input type="search" name="search" id="search" placeholder="Search games, systems, support, etc."></span>
-                    <span><button><a href="#">Support</a></button></span>
-                    <span><button><a href="#">Wish List</a></button></span>
-                    <span><button><a href="#">Log in/Sign up</a></button></span>
+                <div class="uppermenu">
+                    <div class="uppermenu-cnt" id="logo">
+                        <img src="assets/logo.png" alt="">
+                    </div>   
+                    <div class="uppermenu-cnt" id="search-cnt">
+                        <div class="search-box">
+                            <input type="search" name="search" id="search" placeholder="Search games, systems, support, etc.">
+                        </div>
+                    </div>
+                    <div class="uppermenu-cnt" id="links-right">
+                        <span><a href="#">Support</a></span>
+                        <span><a href="#">Wish List</a></span>
+                        <span><a href="#">Log in/Sign up</a></span>
+                    </div>
                 </div>
-             <hr>
-             <div>
-                <ul>
-                    <li>Games
-                        <ul>
-                            <li>Shop games</li>
-                            <li>Sales and deals</li>
-                            <li>Coming soon</li>
-                            <li>Online services</li>
-                            <li>Mobile games</li>
-                        </ul>
-                    </li>
-                    <li>Hardware
-                        <ul>
-                            <li>Nintendo Switch Lineup</li>
-                            <li>Accessories</li>
-                            <li>amiibo</li>
-                        </ul>
-                    </li>
-                    <li>News & Events</li>
-                    <li>Play Nintendo</li>
-                </ul> 
-             </div>
+
+                <div class="bottomenu">
+                    <div class="dropdown">
+                        <a class="dropdown-btn" href="#">Games<span class="arrow-down">v</span></a>
+                        <div class="submenu-cnt">
+                            <div class="sub-item">Shop games</div>
+                            <div class="sub-item">Sales and deals</div>
+                            <div class="sub-item">Coming soon</div>
+                            <div class="sub-item">Online services</div>
+                            <div class="sub-item">Mobile games</div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-btn" href="#">Hardware<span class="arrow-down">v</span></a>
+                        <div class="submenu-cnt">
+                            <div class="sub-item">Nintendo Switch Lineup</div>
+                            <div class="sub-item">Accessories</div>
+                            <div class="sub-item">amiibo</div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-btn" href="#">News & Events</a>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-btn" href="#">Play Nintendo</a>
+                    </div>
+                </div>
             </nav>
      </header>
+
     <main>
         <section>
-            <picture>
-                <img src="assets/Ncom_1366x493_desktop_pkmn_arceus.jpg" alt="protagonisti che fissano il vesuvio"
-                width="auto"
-                height="400">            
-            </picture>
-            <h1 style="display:inline">Pre-order digitally-Play at launch</h1>
-            <button>Learn more ></button>
+            <div class="main-img"></div>
+            <div class="banner">
+                <h1>Pre-order digitally-Play at launch</h1>
+                <div class="btn-cnt"><a class="btn">Learn more ></a></div>
+            </div>
         </section>
+
         <hr>
-        <section>
-            <div>
-                <img src="assets/hero kirby.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
+
+        <section class="tiles-cnt">
+            <div class="tile-cnt">
+                <div>
+                    <a href="#"><img src="assets/hero kirby.jpg" alt="Kirby è maschio addio infanzia"></a>
+                </div>
+                <div>
+                    <a href="#"><h3>Kirby and the Forgotten Land - Pre-order now</h3></a>
+                </div>
+                <div class="subtitle">
+                    <span>Nintendo Switch</span>
+                </div>
             </div>
-            <div>
-                <img src="assets/brain.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
+            <div class="tile-cnt">
+                <div>
+                    <a href="#"><img src="assets/brain.jpg" alt="Kirby è maschio addio infanzia"></a>
+                </div>
+                <div>
+                    <a href="#"><h3>Kirby and the Forgotten Land - Pre-order now</h3></a>
+                </div>
+                <div class="subtitle">
+                    <span>Nintendo Switch</span>
+                </div>
             </div>
-            <div>
-                <img src="assets/triangle.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
+            <div class="tile-cnt">
+                <div>
+                    <a href="#"><img src="assets/triangle.jpg" alt="Kirby è maschio addio infanzia"></a>
+                </div>
+                <div>
+                    <a href="#"><h3>Kirby and the Forgotten Land - Pre-order now</h3></a>
+                </div>
+                <div class="subtitle">
+                    <span>Nintendo Switch</span>
+                </div>
             </div>
-            <div>
-                <img src="assets/metroid.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
+            <div class="tile-cnt">
+                <div>
+                    <a href="#"><img src="assets/metroid.jpg" alt="Kirby è maschio addio infanzia"></a>
+                </div>
+                <div>
+                    <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
+                </div>
+                <div class="subtitle">
+                    <span>Nintendo Switch</span>
+                </div>
+            </div>
+            <div class="tile-cnt">
+                <div>
+                    <img src="assets/hero kirby.jpg" alt="Kirby è maschio addio infanzia">
+                </div>
+                <div>
+                    <h3>Kirby and the Forgotten Land - Pre-order now</h3>
+                </div>
+                <div class="subtitle">
+                    <span>Nintendo Switch</span>
+                </div>
             </div>
         </section>
+
         <hr>
         <section>
           <picture>
