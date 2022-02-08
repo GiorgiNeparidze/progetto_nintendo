@@ -349,7 +349,6 @@
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: 10px;
-
         margin: 20px auto;
     }
 
@@ -445,7 +444,78 @@
             width: 150%;
         }
     }
+    .grid-shop{
+        display: grid;
+        grid-template-columns: 1fr 2fr auto;
+        background-color: #E60012;
+        width: 70%;
+        margin: 0 auto;
+        padding: 0 20px;
+        align-items: center;
+        height: 200px;
+    }
+    .grid-shop h2{
+        color: white;
 
+    }
+    .grid-shop .btn-cnt{
+        background-color: rgba(0, 0, 0, 0.4);
+        border: solid black 1px;
+    }
+    .grid-shop .btn-cnt:hover{
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .grid-explore{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 10px;
+    }
+    .grid-explore picture{
+        grid-column: span 2;
+    }
+    .grid-explore img{
+        width: 100%;
+    }
+    .grid-explore .btn-cnt{
+        justify-self: right;
+    }
+    .explore-section{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .explore-section h2{
+        justify-self: flex-start;
+    }
+    .character-section{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .character-flex{
+        display: flex;
+        margin: 20px;
+    }
+    .character-flex div{
+        margin: 10px;
+    }
+    .mario{
+        background-image: url(assets/mario-bg.avif);
+        border-radius: 10px;
+    }
+    .zelda{
+        background-image: url(assets/zelda-bg.avif);
+        border-radius: 10px;
+    }
+    .animal-crossing{
+        background-image: url(assets/Animal_Crossing_A_background.jpg);
+        border-radius: 10px;
+    }
+    .kirby{
+        background-image: url(assets/Kirby_B_background.avif);
+        border-radius: 10px;
+    }
 </style>
 
 <body>
@@ -575,30 +645,34 @@
 
         <hr>
         <section>
-            <div></div>
-          <picture>
-              <img src="assets/Game_Store_Switch_Games.png" alt="compra i nostri joy-con fasani">
-          </picture>
-          <div class="banner">
-            <h2>Game Store: Buy, download, and play right away!</h2>
-            <div class="btn-cnt">
-                <a class="btn" href="#">Shop games<i class="fas fa-chevron-right"></i></a>
+            <div class="grid-shop">
+                <picture>
+                    <img src="assets/Game_Store_Switch_Games.png" alt="compra i nostri joy-con fasani">
+                </picture>
+                <div class="banner">
+                  <h2>Game Store: Buy, download, and play right away!</h2>
+                </div>
+                  
+                <div class="btn-cnt">
+                    <a class="btn" href="#">Shop games<i class="fas fa-chevron-right"></i></a>
+                </div>
             </div>
-          </div>
         </section>
 
         <hr>
-        <section>
-            <h1>Explore gaming systems</h1>
-            <picture>
-                <img src="assets/2296x680_ExploreGamingSystems.jpg" alt="la Switch lite non ha senso"
-                width="800"
-                height="auto">
-            </picture>
-
-            <h2 style="display: inline;">Nintendo Switch family - Three ways to play</h2>
-            <button>
-                Starting at $199.99 MSRP*</button>
+        <section class="explore-section">
+            <h2>Explore gaming systems</h2>
+            <div class="grid-explore">
+                <picture>
+                    <img src="assets/2296x680_ExploreGamingSystems.jpg" alt="la Switch lite non ha senso"
+                    width="800"
+                    height="auto">
+                </picture>
+                <h2>Nintendo Switch family - Three ways to play</h2>
+                <div class="btn-cnt">
+                    <a class="btn" href="#">Starting at $199.99 MSRP*<i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
         </section>
         <hr>
         <section class="news-section">
@@ -691,37 +765,46 @@
              </div>
         </section>
         <hr>
-        <section>
+        <section class="character-section">
             <h2>Characters</h2>
-            <div>
-                <picture>
-                    <img src="assets/mario-fg.jpg" alt="">
-                </picture>
-                <figcaption>Mario</figcaption>
+            <div class="character-flex">
+                <div>
+                    <div class="mario">
+                        <picture>
+                            <img src="assets/mario-fg.jpg" alt="">
+                        </picture>
+                    </div>      
+                    <figcaption>Mario</figcaption>
+                </div>
+                <div>
+                    <div class="zelda">
+                        <picture>
+                            <img src="assets/zelda-fg.jpg" alt="">
+                        </picture>
+                    </div>
+                    <figcaption>The Legend of Zelda™</figcaption>
+                </div>
+                <div>
+                    <div class="animal-crossing">
+                        <picture>
+                            <img src="assets/Animal_Crossing_A_characters.jpg" alt="">
+                        </picture>
+                    </div>
+                    <figcaption>Animal Crossing</figcaption>
+                </div>
+                <div>
+                    <div class="kirby">
+                        <picture>
+                            <img src="assets/Kirby_B_character.jpg" alt="">
+                        </picture>
+                    </div>
+                    <figcaption>Kirby</figcaption>
+                </div>
             </div>
-            <div>
-                <picture>
-                    <img src="assets/zelda-fg.jpg" alt="">
-                </picture>
-                <figcaption>The Legend of Zelda™</figcaption>
-            </div>
-            <div>
-                <picture>
-                    <img src="assets/Animal_Crossing_A_characters.jpg" alt="">
-                </picture>
-                <figcaption>Animal Crossing</figcaption>
-            </div>
-            <div>
-                <picture>
-                    <img src="assets/Kirby_B_character.jpg" alt="">
-                </picture>
-                <figcaption>Kirby</figcaption>
-            </div>
+            <p>*MSRP: Manufacturer's Retail Price. Actual price may vary. See retailer for details.</p>
         </section>
-        <p>*MSRP: Manufacturer's Retail Price. Actual price may vary. See retailer for details. </p>
     </main>
     <footer>
-
         <section class="footer-up">
             <div class="footer-up-cnt">
                 <ul class="about">
