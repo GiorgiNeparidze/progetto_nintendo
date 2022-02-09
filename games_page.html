@@ -1,74 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="icon" href="http://www.nintendo.com/apps/noa/images/favicon.ico?v=2022012117">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylegames.css">
+    <title>Nintendo Game Store</title>
   </head>
   <body>
     <header>
       <nav>
-        <div>
-          <span><a href="#home">Nintendo</a></span>
-          <span><input type="search" name="search" id="search" placeholder="Search games, systems, support, etc."/></span>
-          <span><button><a href="#">Support</a></button></span>
-          <span><button><a href="#">Wish List</a></button></span>
-          <span><button><a href="#">Log in/Sign up</a></button></span>
+        <div class="uppermenu">
+          <div class="uppermenu-cnt" id="logo">
+            <img src="assets/logo.png" alt="logo" />
+          </div>
+          <div class="uppermenu-cnt" id="search-cnt">
+            <div class="search-box">
+              <span>
+                <i class="fas fa-search"></i>
+              </span>
+              <input type="search" name="search" id="search" placeholder="Search games, systems, support, etc."/>
+            </div>
+          </div>
+          <div class="uppermenu-cnt" id="links-right">
+            <span><a href="#"><i class="fas fa-question-circle"></i>Support</a></span>
+            <span><a href="#"><i class="fas fa-heart"></i>Wish&nbspList</a></span>
+            <span><a href="#"><i class="fas fa-user"></i>Log&nbspin / Sign&nbspup</a></span>
+          </div>
         </div>
-        <hr />
-        <div>
-          <ul>
-            <li>
-              Games
-              <ul>
-                <li>Shop games</li>
-                <li>Sales and deals</li>
-                <li>Coming soon</li>
-                <li>Online services</li>
-                <li>Mobile games</li>
-              </ul>
-            </li>
-            <li>
-              Hardware
-              <ul>
-                <li>Nintendo Switch Lineup</li>
-                <li>Accessories</li>
-                <li>amiibo</li>
-              </ul>
-            </li>
-            <li>News & Events</li>
-            <li>Play Nintendo</li>
-          </ul>
+
+        <div class="bottomenu">
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              <i class="fa fa-dice"></i>Games<span class="arrow-down">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
+            <div class="submenu-cnt">
+              <div class="sub-item">Shop games</div>
+              <div class="sub-item">Sales and deals</div>
+              <div class="sub-item">Coming soon</div>
+              <div class="sub-item">Online services</div>
+              <div class="sub-item">Mobile games</div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              <i class="fa fa-gamepad"></i>Hardware<span class="arrow-down"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="submenu-cnt">
+              <div class="sub-item">Nintendo Switch Lineup</div>
+              <div class="sub-item">Accessories</div>
+              <div class="sub-item">amiibo</div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-btn" href="#"><i class="fa fa-message"></i>News & Events</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-btn" href="#"><i class="fa fa-star"></i>Play Nintendo</a>
+          </div>
         </div>
       </nav>
     </header>
+
     <main>
-      <h1 style="display: inline">Game Store</h1>
-      <button>See all games</button>
+      <div class="title-games">
+        <h1>Game Store</h1>
+        <div class="btn-cnt">
+          <a class="btn" href="#">See all games<i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
       <div>
         <picture>
-          <img
-            src="assets/Centerstages_Ncom_1366x493_desktop_pokemon.jpg"
-            alt="img1"
-            width="auto"
-            height="400px"
-          />
+          <img src="assets/Centerstages_Ncom_1366x493_desktop_pokemon.jpg" alt="img1" width="auto" height="400px"/>
         </picture>
       </div>
-      <div>
-        <h2 style="display: inline">Available now</h2>
-        <button>Learn more</button>
+      <div class="banner">
+        <h2>Available now</h2>
+        <div class="btn-cnt">
+          <a class="btn" href="#">Learn more<i class="fas fa-chevron-right"></i></a>
+        </div>
       </div>
-      <section>
-        <label for="search"><strong>Search:</strong></label>
-        <input
-          type="text"
-          name="search"
-          id="search"
-          placeholder="Search games by title, characters, publish, etc."
-        />
-        <div>
+
+      <section class="search-title">
+        <div class="flex-games">
+          <h2>Search</h2>
+          <div class="cnt-games">
+            <div class="search-box">
+              <span>
+                <i class="fas fa-search"></i>
+              </span>
+              <input type="search" name="search" id="search" placeholder="Search games by title, charactes, publisher, etc."/>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-games">
           <button>Mario</button>
           <button>Pokémon</button>
           <button>Zelda</button>
@@ -76,229 +109,298 @@
           <button>Games with demos</button>
         </div>
       </section>
+
       <!--Best sellers-->
-      <section>
+      <div class="flex-releases-title">
         <h2>Nintendo Switch best sellers</h2>
-        <button>See full list</button>
-        <div>
+        <h3>
+          <a class="link-borderless" href="#">See full list<i class="fas fa-chevron-right"></i><a>
+        </h3>
+      </div>
+      <section class="tiles-cnt">
+        <div class="tile">
           <picture>
-            <img src="assets/hero.jpg" alt="compralo e facci felici" />
+            <img src="assets/hero.jpg" alt="Pokémon Legends" />
             <figcaption>01/28/22</figcaption>
           </picture>
           <h3>Pokémon™ Legends: Arceus</h3>
           <h3>$59.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/mario.jpg" alt="compralo e facci felici" />
+            <img src="assets/mario.jpg" alt="Mario Party Superstars" />
             <figcaption>10/29/21</figcaption>
           </picture>
-          <h3>Mariio Party™ Superstars</h3>
+          <h3>Mario Party™ Superstars</h3>
           <h3>$59.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/minecraft.jpg" alt="compralo e facci felici" />
+            <img src="assets/minecraft.jpg" alt="Minecraft" />
             <figcaption>06/20/18</figcaption>
           </picture>
           <h3>Minecraft</h3>
           <h3>$29.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/mortal.jpg" alt="compralo e facci felici" />
+            <img src="assets/mortal.jpg" alt="Mortal Kombat" />
             <figcaption>04/22/19</figcaption>
           </picture>
           <h3>Mortal Kombat 11</h3>
           <h3>$49.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/kart.jpg" alt="compralo e facci felici" />
+            <img src="assets/kart.jpg" alt="Mario Kart™ 8 Deluxe" />
             <figcaption>04/28/17</figcaption>
           </picture>
           <h3>Mario Kart™ 8 Deluxe</h3>
           <h3>$59.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
       </section>
       <!--New releases-->
-      <section>
+      <div class="flex-releases-title">
         <h2>Nintendo Switch new releases</h2>
-        <button>See full list</button>
-        <div>
+        <h3>
+          <a class="link-borderless" href="#"
+            >See full list<i class="fas fa-chevron-right"></i></a>
+        </h3>
+      </div>
+      <section class="tiles-cnt">
+        <div class="tile">
           <picture>
-            <img src="assets/astroneer.jpg" alt="compralo e facci felici" />
+            <img src="assets/astroneer.jpg" alt="astroneer" />
             <figcaption>01/13/22</figcaption>
           </picture>
           <h3>ASTRONEER</h3>
           <h3>$29.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/bayonetta.jpg" alt="compralo e facci felici" />
+            <img src="assets/bayonetta.jpg" alt="Bayonetta™" />
             <figcaption>12/22/21</figcaption>
           </picture>
           <h3>Bayonetta™ and Bayonetta™ 2 Digital Bundle</h3>
           <h3>$59.98</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/dungeon.jpg" alt="compralo e facci felici" />
+            <img src="assets/dungeon.jpg" alt="Dungeon Munchies" />
             <figcaption>12/15/21</figcaption>
           </picture>
           <h3>Dungeon Munchies</h3>
           <h3>$16.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/lets.jpg" alt="compralo e facci felici" />
+            <img src="assets/lets.jpg" alt="Oink Games" />
             <figcaption>12/15/21</figcaption>
           </picture>
           <h3>Let's Play! Oink Games</h3>
           <h3>$21.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
-        <div>
+        <div class="tile">
           <picture>
-            <img src="assets/chicory.jpg" alt="compralo e facci felici" />
+            <img src="assets/chicory.jpg" alt="Chicory" />
             <figcaption>12/15/21</figcaption>
           </picture>
           <h3>Chicory: A Colorful Tale</h3>
           <h3>$19.99</h3>
-          <span><u>Nintendo Switch</u></span>
+          <div class="subtitle">
+            <span>Nintendo Switch</span>
+          </div>
         </div>
       </section>
       <!--Demo-->
-      <section>
-        <h2>Free-to-play games</h2>
-        <picture>
-          <img src="assets/fort.jpg" alt="fortnite" width="250px" />
-        </picture>
-        <picture>
-          <img src="assets/rocket.jpg" alt="rocket league" width="250px" />
-        </picture>
+      <section class="freetoplay-section">
+        <div>
+          <h2>Free-to-play games</h2>
+        </div>
+        <div class="freetoplay-tiles">
+          <div>
+            <picture>
+              <img src="assets/fort.jpg" alt="fortnite" />
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <img src="assets/rocket.jpg" alt="rocket league" />
+            </picture>
+          </div>
+        </div>
       </section>
       <!--Family game-->
       <section>
-        <h2>Family game time</h2>
-        <button>See full list</button>
-        <div>
-          <picture>
-            <img src="assets/big.png" alt="compralo e facci felici" />
-            <figcaption>12/03/21</figcaption>
-          </picture>
-          <h3>Big Brain Academy: Brain vs. Brain</h3>
-          <h3>$29.99</h3>
-          <span><u>Nintendo Switch</u></span>
+        <div class="flex-releases-title">
+          <h2>Family game time</h2>
+          <h3><a class="link-borderless" href="#">See full list<i class="fas fa-chevron-right"></i></a></h3>
         </div>
-        <div>
-          <picture>
-            <img src="assets/party.jpg" alt="compralo e facci felici" />
-            <figcaption>10/29/21</figcaption>
-          </picture>
-          <h3>Mario Party Superstars</h3>
-          <h3>$59.99</h3>
-          <span><u>Nintendo Switch</u></span>
-        </div>
-        <div>
-          <picture>
-            <img src="assets/just.jpg" alt="compralo e facci felici" />
-            <figcaption>11/04/21</figcaption>
-          </picture>
-          <h3>Just Dance 2022</h3>
-          <h3>$49.99</h3>
-          <span><u>Nintendo Switch</u></span>
-        </div>
-        <div>
-          <picture>
-            <img src="assets/wario.jpg" alt="compralo e facci felici" />
-            <figcaption>09/10/21</figcaption>
-          </picture>
-          <h3>WarioWare: Get It Together!</h3>
-          <h3>$49.99</h3>
-          <span><u>Nintendo Switch</u></span>
-        </div>
-        <div>
-          <picture>
-            <img src="assets/golf.jpg" alt="compralo e facci felici" />
-            <figcaption>06/25/21</figcaption>
-          </picture>
-          <h3>Mario Golf: Super Rush</h3>
-          <h3>$59.99</h3>
-          <span><u>Nintendo Switch</u></span>
+        <div class="tiles-cnt">
+          <div class="tile">
+            <picture>
+              <a href="#"><img src="assets/big.png" alt="Big Brain Academy" /></a>
+              <p>12/03/21</p>
+            </picture>
+            <h3><a href="#"> Big Brain Academy: Brain vs. Brain</a></h3>
+            <h3>$29.99</h3>
+            <div class="subtitle">
+              <span>Nintendo Switch</span>
+            </div>           
+          </div>
+          <div class="tile">
+            <picture>
+              <a href="#"><img src="assets/party.jpg" alt="Mario Party Superstars" /></a>
+              <p>10/29/21</p>
+            </picture>
+            <h3><a href="#"> Mario Party Superstars</a></h3>
+            <h3>$59.99</h3>
+            <div class="subtitle"> 
+              <span>Nintendo Switch</span>
+            </div>
+          </div>
+          <div class="tile">
+            <picture>
+              <a href="#"><img src="assets/just.jpg" alt="Just Dance 2022" /></a>
+              <p>11/04/21</p>
+            </picture>
+            <h3><a href="#"> Just Dance 2022</a></h3>
+            <h3>$49.99</h3>
+            <div class="subtitle">
+              <span>Nintendo Switch</span>         
+            </div>
+          </div>
+          <div class="tile">
+            <picture>
+              <a href="#"><img src="assets/wario.jpg" alt="WarioWare" /></a>
+              <p>09/10/21</p>
+            </picture>
+            <h3><a href="#"> WarioWare: Get It Together!</a></h3>
+            <h3>$49.99</h3>
+            <div class="subtitle">
+              <span>Nintendo Switch</span>
+            </div>
+          </div>
+          <div class="tile">
+            <picture>
+              <a href="#"><img src="assets/golf.jpg" alt="Mario Golf" /></a>
+              <p>06/25/21</p>
+            </picture>
+            <h3><a href="#"> Mario Golf: Super Rush</a></h3>
+            <h3>$59.99</h3>
+            <div class="subtitle">
+              <span>Nintendo Switch</span>
+            </div>
+          </div>
         </div>
       </section>
-      <section>
-        <button>See all games</button>
-        <div>
-          <button>How to buy digital</button>
-          <button>Redeem code</button>
-          <button>Top picks for you</button>
+      <section >
+        <div class="flex-btn-cnt">
+          <div class="btn-cnt"><a class="btn" href="#">See all games<i class="fas fa-chevron-right"></i></a></div>
+        </div>
+        <div class="btn-games">
+          <button><img src="assets/phone-plus-laptop.svg" alt="phone+laptop"> How to buy digital<i class="fas fa-chevron-right"></i></button>
+          <button><img src="assets/sparkly-card.svg" alt="sparkly-card"> Redeem code<i class="fas fa-chevron-right"></i></button>
+          <button><img src="assets/StarBeamicon.svg" alt="stella"> Top picks for you<i class="fas fa-chevron-right"></i></button>
         </div>
       </section>
     </main>
     <footer>
-      <section>
-        <ul>
-          Games
-          <li>Coming Soon</li>
-          <li>New Release</li>
-          <li>Best Sellers</li>
-          <li>Sales and Deals</li>
-          <li>Nintendo 3DS</li>
-        </ul>
-        <ul>
-          Explore More
-          <li>Game Guide</li>
-          <li>Nintendo Switch Online</li>
-          <li>Nintendo Switch</li>
-          <li>Super Mario Bros.</li>
-        </ul>
-        <ul>
-          Support
-          <li>Warranty</li>
-          <li>Nintendo Switch Support</li>
-          <li>Nintendo 3DS Support</li>
-          <li>Repair</li>
-          <li>Nintendo Product Recycling</li>
-        </ul>
-        <ul>
-          Where to Buy
-          <li>Game Store</li>
-          <li>List of Online Retailers</li>
-          <li>Nintendo NY</li>
-          <li>Nintendo Store</li>
-        </ul>
-        <ul>
-          Health & Safety / Privacy
-          <li>Health & Safety Precautions</li>
-          <li>Manual</li>
-          <li>Cookies and Interest Based ads</li>
-          <li>Privacy Policy</li>
-          <li>Terms of Use</li>
-        </ul>
-        <div>
-          <strong><a href="change language">Change region</a></strong>
+      <section class="footer-up-section">
+        <div class="footer-up-cnt-games">      
+          <ul>
+            Games
+            <li><a href="#"> Coming Soon</a></li>
+            <li><a href="#">New Release</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Sales and Deals</a></li>
+            <li><a href="#">Nintendo 3DS</a></li>
+          </ul>
+          <ul>
+            Explore More
+            <li><a href="#">Game Guide</a></li>
+            <li><a href="#">Nintendo Switch Online</a></li>
+            <li><a href="#">Nintendo Switch</a></li>
+            <li><a href="#">Super Mario Bros.</a></li>
+          </ul>
+          <ul>
+            Support
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Nintendo Switch Support</a></li>
+            <li><a href="#">Nintendo 3DS Support</a></li>
+            <li><a href="#">Repair</a></li>
+            <li><a href="#">Nintendo Product Recycling</a></li>
+          </ul>
+          <ul>
+            Where to Buy
+            <li><a href="#">Game Store</a></li>
+            <li><a href="#">List of Online Retailers</a></li>
+            <li><a href="#">Nintendo NY</a></li>
+            <li><a href="#">Nintendo Store</a></li>
+          </ul>
+          <ul>
+            Health & Safety / Privacy
+            <li><a href="#">Health & Safety Precautions</a></li>
+            <li><a href="#">Manual</a></li>
+            <li><a href="#">Cookies and Interest Based ads</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+          <div>
+            <strong><a href="change language">Change region<img src="assets/us-flag.svg" alt="us flag"></a></strong>
+          </div>
         </div>
       </section>
-      <hr />
-      <section>
-        <div>Contact Us <span>Website Feedback</span></div>
-        <div>(icone)</div>
-        <p>
-          © 2022 Nintendo. Games are property of their respective owners. <br />
-          Nintendo of America Inc. | Headquarters are in Redmond, Washington,
-          USA | Support
-        </p>
-      </section>
+      <section class="footer-bottom-section">
+        <div class="flex-icons">
+            <div>
+                <div>
+                    <a href="#">Contact Us </a><a href="#">Website Feedback</a>
+                </div>
+                <span class="footer-icon blue">
+                    <i class="fab fa-facebook"></i>
+                </span>
+                <span class="footer-icon pink">
+                    <i class="fab fa-instagram"></i>
+                </span>
+                <span class="footer-icon sky">
+                    <i class="fab fa-twitter"></i>
+                </span>
+                <span class="footer-icon red">
+                    <i class="fab fa-youtube"></i>
+                </span>
+            </div>
+        </div>
+        <p>© 2022 Nintendo. Games are property of their respective owners. <br>
+            Nintendo of America Inc. | Headquarters are in Redmond, Washington, USA | Support</p>
+    </section>
     </footer>
   </body>
 </html>
