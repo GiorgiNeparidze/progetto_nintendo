@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,514 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Homepage</title>
 </head>
-
-
-
-<style>
-
-    :root {
-        --pippo: green;
-        font-family: 'Nunito', sans-serif;
-        color: #484848;
-        font-size: 16px;
-    }
-
-    html {
-        overflow-x: hidden;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        display: grid;
-        grid-template-rows: repeat(3, auto);
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-        transition: all 0.3s ease;
-    }
-
-  
-
-    a:hover {
-        color: #E60012;
-    }
-
-    article a {
-        color: #E60012;
-        font-weight: bold;
-    }
-
-    h3 a {
-        color: inherit;
-    }
-
-    article a:hover {
-        color: rgb(187, 43, 43);
-        text-decoration: underline;
-    }
-
-    ::before, ::after,
-    div, p, h1, h2, h3, h4, h5, h6,
-    span, ul, li {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        color: inherit;
-        text-decoration: none;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .uppermenu-cnt {
-        /* flex-basis: 100px; */
-        align-items: center;
-        display: flex;
-    }
-
-    #search-cnt{
-         flex-grow: 1;
-    }
-
-    nav { /* diventa nav*/
-        /* background-color: indianred; */
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        top: 0;
-        width: 100%;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .uppermenu, .bottomenu {
-        display: flex;
-        justify-content: center;
-    }
-
-    .uppermenu {
-        height: 55px;
-    }
-
-    #links-right span {
-        margin: 10px;
-        font-weight: bold;
-    }
-
-    .bottomenu {
-        /* background-color: lightseagreen; */
-        border-top: 1px solid #ddd;
-    }
-
-   /* .search-box{
-        width: 100%;
-        /* background-color: khaki;
-    }*/
-
-    input {
-        margin: 5px;
-        max-width: 500px;
-        width: 40%;
-    }
-
-    .dropdown-btn {
-        display: inline-block;
-        position: relative;
-        margin: 0 10px;
-        /* background-color: lightsalmon; */
-        padding: 5px 10px;
-        transition: all 0.5s ease;
-        font-weight: bold;
-    }
-
-   /* .dropdown-btn:hover {
-        color: red;
-    }*/
-    .dropdown:focus-within .submenu-cnt{
-        display: flex;
-        justify-content: center;
-    }
-
-    .dropdown:focus-within .arrow-down{
-        transform: rotate(180deg);
-    }
-
-    .submenu-cnt {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-top: 1px solid #ddd;
-        padding: 10px;
-    }
-
-    .sub-item {
-        margin:  5px 8px;
-        padding: 20px 40px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: white;
-    }
-
-    .arrow-down {
-        transform-origin: 25% 50%;
-        display: inline-block;
-        margin-left: 5px;
-        font-size: 12px;
-        transition: transform 0.5s ease;
-       /* transform: rotate(180deg);*/
-    }
-
-    img {
-        max-width: 100%;
-        /*height: 100%;*/
-    }
-
-    #logo img {
-        /* width: 150px;
-        height: 72px;  */
-        width: 100%;
-    }
-
-    #logo {
-        width: 150px;
-        overflow: hidden;
-        min-width: 150px;
-
-    }
-
-    .main-img {
-        margin-top: 90px;
-        margin-bottom: 20px;
-    }
-
-    .main-img img {
-    	height: 100%;
-    }
-
-    .banner {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-        justify-content: center;
-    }
-
-    .btn-cnt {
-        background-color: #E60012;
-        /* padding: 10px 40px; */
-        border-radius: 10px;
-        margin-left: 10px;
-        transition: all 0.3s ease;
-    }
-
-    .btn-cnt:hover {
-        transform:scale(1.1);
-        background-color: rgb(187, 43, 43);
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 15px 20px;
-        color: white;
-        font-weight: bold;
-        font-size: 1.4em;
-    }
-
-    .btn:hover {
-        color: white;
-    }
-
-    .tiles-cnt {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
-
-    .tile-cnt {
-        margin: 20px;
-        flex-basis: 200px;
-        flex-grow: 1;
-
-    }
-
-    article img, .tiles-cnt img {
-        border-radius: 6px;
-        border: 1px solid #ddd;
-        width:100%;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    /*.tiles-cnt*/ h3 {
-        margin-bottom: 10px;
-        font-size: 1.3rem;
-    }
-
-    hr {
-        margin: 50px 100px;
-        border: none;
-        border-bottom: 1px solid;
-        border-color: #ccc ;
-    }
-
-    .subtitle {
-        margin-top: 20px;
-    }
-
-    .subtitle span {
-        padding-bottom: 10px;
-        border-bottom: 1px solid #E60012;
-    }
-
-
-    [type=search], [type=search]:focus  {
-        border: none;
-        outline: none;
-        width: 100%;
-        max-width: 350px;
-    }
-    a .fas {
-        margin-right: 10px;
-    }
-    a .fa-chevron-right {
-        margin-left: 10px;
-    }
-
-    .btn .fas {
-        margin-right: 0;
-        margin-left: 10px;
-    }
-
-    .fa-search {
-        margin-right: 0;
-    }
-
-    .search-box:focus-within, .search-box:hover {
-        border-bottom: 1px solid #e60012;
-        color: #e60012;
-    }
-    ::placeholder {
-        transition: all 0.3s ease;
-        font-family: 'Nunito', sans-serif;
-        font-weight: bold;
-    }
-
-    :hover::placeholder  {
-        color: #e60012;
-    }
-
-    .search-box {
-        display: flex;
-        align-items: center;
-        margin-left: 30px;
-        border: none;
-        border-bottom: 1px solid black;
-        padding: 0;
-        padding-bottom: 2px;
-        transition: all 0.3s ease;
-        flex-grow: 1;
-        max-width: 500px;
-    }
-
-    .news-section {
-        width: 70%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .news-section h2 {
-        align-self: flex-start;
-    }
-
-    .grid-cnt-news {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 10px;
-        margin: 20px auto;
-    }
-
-    .big-news {
-        grid-column: span 2;
-    }
-
-    footer {
-        margin-top: 20px;
-    }
-
-    footer a:hover {
-        color: inherit;
-        text-decoration-line: underline;
-    }
-
-    .footer-up {
-        background-image: linear-gradient(to top, rgb(231, 231, 231) 0px, rgb(249, 249, 249) 75%) ;
-    }
-
-    .footer-up-cnt {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: auto;
-        gap: 10px;
-        width: 70%;
-        margin: 0 auto;
-        padding: 30px 0;
-    }
-
-    .legal {
-        grid-column: 6;
-    }
-    footer ul {
-        font-weight: bold;
-    }
-    footer li {
-        font-weight: initial;
-    }
-    footer ul li:first-child {
-       margin-top: 10px;
-    }
-
-    .flex-icons {
-        display: flex;
-        justify-content: center;
-    }
-
-    .footer-bottom {
-        background-image: linear-gradient(rgb(60, 58, 58) 0px, rgb(72, 72, 72) 50%);
-        color: white;
-        padding: 30px 0;
-    }
-
-    .footer-up img {
-        width: 20px;
-    }
-
-    .footer-bottom p {
-        text-align: center;
-    }
-
-    .footer-icon {
-        width: 48px;
-        height: 48px;
-        margin: 10px 5px;
-        font-size: 30px;
-        text-align: center;
-        display: inline-block;
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    .blue {
-        background-color: #1878f2;
-    }
-
-    .pink {
-        background-color: #d32c69;
-    }
-
-    .sky {
-        background-color: #1da1f2;
-    }
-
-    .red {
-        background-color: #ff0200;
-    }
-
-    @media screen and (min-width: 2500px) {
-
-        .main-img img {
-            width: 150%;
-        }
-    }
-    .grid-shop{
-        display: grid;
-        grid-template-columns: 1fr 2fr auto;
-        background-color: #E60012;
-        width: 70%;
-        margin: 0 auto;
-        padding: 0 20px;
-        align-items: center;
-        height: 200px;
-    }
-    .grid-shop h2{
-        color: white;
-
-    }
-    .grid-shop .btn-cnt{
-        background-color: rgba(0, 0, 0, 0.4);
-        border: solid black 1px;
-    }
-    .grid-shop .btn-cnt:hover{
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-    .grid-explore{
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-        gap: 10px;
-    }
-    .grid-explore picture{
-        grid-column: span 2;
-    }
-    .grid-explore img{
-        width: 100%;
-    }
-    .grid-explore .btn-cnt{
-        justify-self: right;
-    }
-    .explore-section{
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        margin: 0 auto;
-    }
-    .explore-section h2{
-        justify-self: flex-start;
-    }
-    .character-section{
-        width: 70%;
-        margin: 0 auto;
-    }
-    .character-flex{
-        display: flex;
-        margin: 20px;
-    }
-    .character-flex div{
-        margin: 10px;
-    }
-    .mario{
-        background-image: url(assets/mario-bg.avif);
-        border-radius: 10px;
-    }
-    .zelda{
-        background-image: url(assets/zelda-bg.avif);
-        border-radius: 10px;
-    }
-    .animal-crossing{
-        background-image: url(assets/Animal_Crossing_A_background.jpg);
-        border-radius: 10px;
-    }
-    .kirby{
-        background-image: url(assets/Kirby_B_background.avif);
-        border-radius: 10px;
-    }
-</style>
 
 <body>
     <header>
@@ -543,9 +38,9 @@
 
                 <div class="bottomenu">
                     <div class="dropdown">
-                        <a class="dropdown-btn" href="#">Games<span class="arrow-down">
+                        <button class="dropdown-btn"><i class="fa fa-dice"></i>Games<span class="arrow-down">
                             <i class="fas fa-chevron-down"></i>
-                        </span></a>
+                        </span></button>
                         <div class="submenu-cnt">
                             <div class="sub-item">Shop games</div>
                             <div class="sub-item">Sales and deals</div>
@@ -555,7 +50,7 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a class="dropdown-btn" href="#">Hardware<span class="arrow-down"><i class="fas fa-chevron-down"></i></span></a>
+                        <button class="dropdown-btn"><i class="fa fa-gamepad"></i>Hardware<span class="arrow-down"><i class="fas fa-chevron-down"></i></span></button>
                         <div class="submenu-cnt">
                             <div class="sub-item">Nintendo Switch Lineup</div>
                             <div class="sub-item">Accessories</div>
@@ -563,17 +58,17 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a class="dropdown-btn" href="#">News & Events</a>
+                        <a class="dropdown-btn" href="#"><i class="fa fa-message"></i>News & Events</a>
                     </div>
                     <div class="dropdown">
-                        <a class="dropdown-btn" href="#">Play Nintendo</a>
+                        <a class="dropdown-btn" href="#"><i class="fa fa-star"></i>Play Nintendo</a>
                     </div>
                 </div>
             </nav>
      </header>
 
     <main>
-        <section>
+        <section class="main-section">
             <div class="main-img">
             	<img src="assets/Ncom_1366x493_desktop_pkmn_arceus.jpg" alt="">
             </div>
@@ -586,10 +81,10 @@
         <hr>
 
         <section class="tiles-cnt">
-            <div class="tile-cnt">
-                <div>
+            <div class="tile">
+                <picture>
                     <a href="#"><img src="assets/hero kirby.jpg" alt="Kirby è maschio addio infanzia"></a>
-                </div>
+                </picture>
                 <div>
                     <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
                 </div>
@@ -597,10 +92,10 @@
                     <span>Nintendo Switch</span>
                 </div>
             </div>
-            <div class="tile-cnt">
-                <div>
+            <div class="tile">
+                <picture>
                     <a href="#"><img src="assets/brain.jpg" alt="Kirby è maschio addio infanzia"></a>
-                </div>
+                </picture>
                 <div>
                     <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
                 </div>
@@ -608,10 +103,10 @@
                     <span>Nintendo Switch</span>
                 </div>
             </div>
-            <div class="tile-cnt">
-                <div>
+            <div class="tile">
+                <picture>
                     <a href="#"><img src="assets/triangle.jpg" alt="Kirby è maschio addio infanzia"></a>
-                </div>
+                </picture>
                 <div>
                     <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
                 </div>
@@ -619,10 +114,10 @@
                     <span>Nintendo Switch</span>
                 </div>
             </div>
-            <div class="tile-cnt">
-                <div>
+            <div class="tile">
+                <picture>
                     <a href="#"><img src="assets/metroid.jpg" alt="Kirby è maschio addio infanzia"></a>
-                </div>
+                </picture>
                 <div>
                     <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
                 </div>
@@ -630,10 +125,10 @@
                     <span>Nintendo Switch</span>
                 </div>
             </div>
-            <div class="tile-cnt">
-                <div>
+            <div class="tile">
+                <picture>
                     <a href="#"><img src="assets/hero kirby.jpg" alt="Kirby è maschio addio infanzia"></a>
-                </div>
+                </picture>
                 <div>
                     <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
                 </div>
@@ -642,17 +137,15 @@
                 </div>
             </div>
         </section>
-
         <hr>
         <section>
             <div class="grid-shop">
                 <picture>
-                    <img src="assets/Game_Store_Switch_Games.png" alt="compra i nostri joy-con fasani">
+                    <img class="no-filter" src="assets/Game_Store_Switch_Games.png" alt="compra i nostri joy-con fasani">
                 </picture>
                 <div class="banner">
                   <h2>Game Store: Buy, download, and play right away!</h2>
-                </div>
-                  
+                </div>          
                 <div class="btn-cnt">
                     <a class="btn" href="#">Shop games<i class="fas fa-chevron-right"></i></a>
                 </div>
@@ -664,9 +157,7 @@
             <h2>Explore gaming systems</h2>
             <div class="grid-explore">
                 <picture>
-                    <img src="assets/2296x680_ExploreGamingSystems.jpg" alt="la Switch lite non ha senso"
-                    width="800"
-                    height="auto">
+                    <img class="no-filter" src="assets/2296x680_ExploreGamingSystems.jpg" alt="la Switch lite non ha senso">
                 </picture>
                 <h2>Nintendo Switch family - Three ways to play</h2>
                 <div class="btn-cnt">
@@ -685,7 +176,7 @@
                         <figcaption>01/20/22</figcaption>
                         <h3><a href="#">Arrives on Nintendo Switch Online + Expansion Pack Today, With The Legend of Zelda: Majora’s Mask Up Next</a></h3>
                         <p>Banjo and Kazooie and … Link?! No matter what form your favorite heroes take, adventures both hilarious and perilous are ahead when Banjo-Kazooie™ and The Legend of Zelda™: Majora’s Mask™ make their way to the Nintendo Switch™ system!</p>
-                        <a href="#">Read more<i class="fas fa-chevron-right"></i></a>
+                        <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>
                 </article>
                 <article class="big-news">
                     <picture>
@@ -694,75 +185,98 @@
                         <figcaption>01/19/22</figcaption>
                         <h3><a href="#">Put your deck-building skills to the test with these card battle games</a></h3>
                         <p> Card-based battles can take on a new and interesting life in a video game. Each of the following games features deep strategy, imaginative art, and a clever use of, well, cards!</p>
-                        <a href="#">Read more<i class="fas fa-chevron-right"></i></a>
+                        <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>
                 </article>
                 <article class="small-news">
                     <picture>
-                        <img src="assets/mininews1.jpg" alt="" width="250">
+                        <img src="assets/mininews1.jpg" alt="">
                     </picture>
                     <figcaption>01/18/22</figcaption>
                     <h3><a href="#">Play the 28th MAXIMUS CUP online event and you could earn an in-game collaborative theme</a></h3>
-                    <a href="#">Read more<i class="fas fa-chevron-right"></i></a>  
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>  
                 </article>
                 <article class="small-news">
                     <picture>
-                        <img src="assets/mininews2.jpg" alt="" width="250">
+                        <img src="assets/mininews2.jpg" alt="">
                     </picture>
                     <figcaption>01/13/22</figcaption>
                     <h3><a href="#">Explore and reshape distant worlds in Astroneer</a></h3>
-                    <a href="#">Read more<i class="fas fa-chevron-right"></i></a>                
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>                
                 </article>
                 <article class="small-news">
                     <picture>
-                        <img src="assets/mininews3.jpg" alt="" width="250">
+                        <img src="assets/mininews3.jpg" alt="">
                     </picture>
                     <figcaption>01/12/22</figcaption>
                     <h3><a href="#">Explore a mysterious world with Kirby and the Forgotten Land on March 25</a></h3>
-                    <a href="#">Read more<i class="fas fa-chevron-right"></i></a>                
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>                
                 </article>
                 <article class="small-news">
                     <picture>
-                        <img src="assets/mininews4.jpg" alt="" width="250">
+                        <img src="assets/mininews4.jpg" alt="">
                     </picture>
                     <figcaption>01/12/22</figcaption>
                     <h3><a href="#">Race the Lion City in the Singapore Tour</a></h3>
-                    <a href="#">Read more<i class="fas fa-chevron-right"></i></a>                     
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>                     
                 </article>
             </div>
-            <div class="btn-cnt"><a class="btn" href="#">See all news<i class="fas fa-chevron-right"></i></a></div> 
+            <div class="flex-btn-cnt">
+                <div class="btn-cnt"><a class="btn" href="#">See all news<i class="fas fa-chevron-right"></i></a></div> 
+            </div>
         </section>
         <hr>
-        <section>
-            <h2 style="display: inline;">Nintendo Switch new releases</h2>
-            <button>See full list ></button>
-            <div>
-               <img src="assets/astroneer.jpg" alt="compralo e facci felici">
-               <p>01/28/22</p>
-               <h3>Pokémon™ Legends: Arceus</h3>
-               <h3>$59.99</h3>
-               <span><u>Nintendo Switch</u></span>
+        <section class="releases-section">
+            <div class="flex-releases-title">
+                <h2>Nintendo Switch new releases</h2>
+                <h3><a class="link-borderless" href="#">See full list<i class="fas fa-chevron-right"></i></a></h3>
             </div>
-            <div>
-                <img src="assets/bayonetta.jpg" alt="compralo e facci felici">
-                <p>01/28/22</p>
-                <h3>Pokémon™ Legends: Arceus</h3>
-                <h3>$59.99</h3>
-                <span><u>Nintendo Switch</u></span>
-             </div>
-             <div>
-                <img src="assets/dungeon2.jpg" alt="compralo e facci felici">
-                <p>01/28/22</p>
-                <h3>Pokémon™ Legends: Arceus</h3>
-                <h3>$59.99</h3>
-                <span><u>Nintendo Switch</u></span>
-             </div>
-             <div>
-                <img src="assets/timelie.jpg" alt="compralo e facci felici">
-                <p>01/28/22</p>
-                <h3>Pokémon™ Legends: Arceus</h3>
-                <h3>$59.99</h3>
-                <span><u>Nintendo Switch</u></span>
-             </div>
+            <div class="tiles-cnt">
+                <div class="tile">
+                    <picture>
+                        <img src="assets/astroneer.jpg" alt="compralo e facci felici">
+                    </picture>
+                    <p>01/28/22</p>
+                    <h3><a href="#">Pokémon™ Legends: Arceus</a></h3>
+                    <h3>$59.99</h3>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                 </div>
+                 <div class="tile">
+                     <picture>
+                        <img src="assets/bayonetta.jpg" alt="compralo e facci felici">
+                     </picture>
+                     <p>01/28/22</p>
+                     <h3><a href="#">Pokémon™ Legends: Arceus</a></h3>
+                     <h3>$59.99</h3>
+                     <div class="subtitle">
+                         <span>Nintendo Switch</span>
+                     </div>
+                  </div>
+                  <div class="tile">
+                      <picture>
+                        <img src="assets/dungeon2.jpg" alt="compralo e facci felici">
+                      </picture>
+                     <p>01/28/22</p>
+                     <h3><a href="#">Pokémon™ Legends: Arceus</a></h3>
+                     <h3>$59.99</h3>
+                     <div class="subtitle">
+                         <span>Nintendo Switch</span>
+                     </div>
+                  </div>
+                  <div class="tile">
+                      <picture>
+                        <img src="assets/timelie.jpg" alt="compralo e facci felici">
+                      </picture>
+                     <p>01/28/22</p>
+                     <h3><a href="#">Pokémon™ Legends: Arceus</a></h3>
+                     <h3>$59.99</h3>
+                     <div class="subtitle">
+                         <span>Nintendo Switch</span>
+                     </div>
+                  </div>
+            </div>
+            
         </section>
         <hr>
         <section class="character-section">
@@ -805,7 +319,7 @@
         </section>
     </main>
     <footer>
-        <section class="footer-up">
+        <section class="footer-up-section">
             <div class="footer-up-cnt">
                 <ul class="about">
                     About Nintendo
@@ -856,7 +370,7 @@
             </div>
 
             </section>
-            <section class="footer-bottom">
+            <section class="footer-bottom-section">
                 <div class="flex-icons">
                     <div>
                         <div>
