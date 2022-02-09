@@ -304,6 +304,8 @@ article img, .tiles-cnt img {
     border-bottom: 1px solid var(--main-color) ;
 }
 
+/* second nav menu */
+
 .c70c{
     width: 70%;
     margin: 0 auto;
@@ -324,6 +326,7 @@ article img, .tiles-cnt img {
     height: 96px;
     width: 96px;
     margin: 20px;
+    margin-left: 0;
 }
 
 .sn-link{
@@ -331,11 +334,46 @@ article img, .tiles-cnt img {
     font-weight: bolder;
 }
 
-
 /* second nav menu */
 
+/* switch family */
 
-/* second nav menu */
+.sf-img-box{
+    width: 100%;
+}
+
+/* switch family */
+
+.oled-img-box{
+    width: 100%;
+    background-color: #e60012;
+}
+.oled-img-box img{
+    max-width: 100%;
+}
+.oled-img-box .transparent{
+    background-image: linear-gradient(180deg, #C4000F 0%, #E60012 100%);
+    padding: 1.5em 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.oled-img-box .transparent div{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.oled-img-box .transparent span{
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+
 /* Main */
 /* FOOTER */
 
