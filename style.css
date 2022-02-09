@@ -203,6 +203,10 @@ nav {
     font-weight: bold;
 }
 
+.dropdown-btn .fa {
+    margin-right: 5px;
+}
+
 .dropdown:focus-within .submenu-cnt {
     display: flex;
     justify-content: center;
@@ -230,10 +234,10 @@ nav {
     background-color: rgba(255, 255, 255, 0.9);
     border-top: 1px solid #ddd;
     padding: 10px;
+    align-items: center;
 }
 
 .sub-item {
-    width: 10%;
     margin:  5px 8px;
     text-align: center;
     font-weight: bold;
@@ -244,17 +248,25 @@ nav {
 }
 
 .sub-menu-icon {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 3em;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    /* padding: 0 30px; */
+    padding: 10px 20px;
+    overflow: hidden;
 }
 
 .sub-menu-icon:hover {
     background-color: var(--main-color);
     color: white;
 }
+ 
+.sub-menu-icon img {
+    height: 50px;
+} 
 
 /* MAIN */
 
