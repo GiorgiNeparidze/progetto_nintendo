@@ -221,6 +221,8 @@ nav {
 }
 
 .submenu-cnt {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     position: absolute;
     left: 0;
     width: 100%;
@@ -231,11 +233,27 @@ nav {
 }
 
 .sub-item {
+    width: 10%;
     margin:  5px 8px;
-    padding: 20px 40px;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 20px 40px; */
+    /* border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white; */
+}
+
+.sub-menu-icon {   
+    font-size: 3em;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: white;
+    /* padding: 0 30px; */
+}
+
+.sub-menu-icon:hover {
+    background-color: var(--main-color);
+    color: white;
 }
 
 /* MAIN */
