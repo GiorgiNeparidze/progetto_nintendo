@@ -242,17 +242,7 @@ nav {
 
 /* style for main section */
 
-.main-img {
-    margin-top: 90px;
-    margin-bottom: 20px;
-}
 
-.banner {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: center;
-}
 
 .btn-cnt {
     background-color: var(--main-color) ;
@@ -314,131 +304,39 @@ article img, .tiles-cnt img {
     border-bottom: 1px solid var(--main-color) ;
 }
 
-
-/* style for shop section */
-
-.grid-shop {
-    display: grid;
-    grid-template-columns: 1fr 2fr auto;
-    background-color: var(--main-color) ;
-    width: 60%;
+.c70c{
+    width: 70%;
     margin: 0 auto;
-    padding: 0 20px;
+}
+
+.second-menu{
+    margin-top: 88px;
+    display: flex;
     align-items: center;
-    height: auto;
-}
-.grid-shop h2 {
-    color: white;
+    justify-content: space-between ;
 }
 
-.grid-shop .btn-cnt {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: solid black 1px;
-}
-.grid-shop .btn-cnt:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.second-nav-img img{
+    max-width: 100%;
 }
 
-/* style for explore section */
-
-.explore-section {
-    width: 60%;
-    margin: 0 auto;
+.second-nav-img{
+    height: 96px;
+    width: 96px;
+    margin: 20px;
 }
 
-.grid-explore {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 10px;
-}
-.grid-explore picture {
-    grid-column: span 2;
-}
-
-.grid-explore .btn-cnt {
-    justify-self: right;
+.sn-link{
+    margin: 5px;
+    font-weight: bolder;
 }
 
 
-/* style for news section */
-
-.news-section {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.flex-btn-cnt {
-    display: flex;
-    justify-content: center;
-}
-
-.grid-cnt-news {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.big-news {
-    grid-column: span 2;
-}
+/* second nav menu */
 
 
-/* style for releases section*/
-
-/* .releases-section {
-     width: 60%;
-    margin: 0 auto;
-} */
-
- .flex-releases-title {
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    align-items: baseline;
-} 
-
-.flex-releases-title h2 {
-    margin-right: 20px;
-}
-
-
-
-
-/* style for characters section */
-
-.character-section {
-    width: 60%;
-    margin: 0 auto;
-}
-.character-flex {
-    display: flex;
-    justify-content: center;
-}
-.character-flex div {
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.mario {
-    background-image: url(assets/mario-bg.avif);
-}
-.zelda {
-    background-image: url(assets/zelda-bg.avif);
-}
-.animal-crossing {
-    background-image: url(assets/Animal_Crossing_A_background.jpg);
-}
-.kirby {
-    background-image: url(assets/Kirby_B_background.avif);
-}
-
-.character-section figcaption {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
+/* second nav menu */
+/* Main */
 /* FOOTER */
 
 footer {
@@ -462,7 +360,7 @@ footer a:hover {
 
 .footer-up-cnt {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     gap: 10px;
     width: 60%;
@@ -471,7 +369,7 @@ footer a:hover {
 }
 
 .legal {
-    grid-column: 6;
+    grid-column: 5;
 }
 footer ul {
     font-weight: bold;
