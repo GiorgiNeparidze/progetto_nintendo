@@ -3,40 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="icon" href="http://www.nintendo.com/apps/noa/images/favicon.ico?v=2022012117">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Homepage</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <span><a href="#home">Nintendo</a></span>
-            <span><input type="search" name="search" id="search" placeholder="Search games, systems, support, etc."></span>
-            <span><button><a href="#">Support</a></button></span>
-            <span><button><a href="#">Wish List</a></button></span>
-            <span><button><a href="#">Log in/Sign up</a></button></span>
-        </nav>
-        <hr>
-        <nav>
-           <ul>
-               <li>Games
-                   <ul>
-                       <li>Shop games</li>
-                       <li>Sales and deals</li>
-                       <li>Coming soon</li>
-                       <li>Online services</li>
-                       <li>Mobile games</li>
-                   </ul>
-               </li>
-               <li>Hardware
-                   <ul>
-                       <li>Nintendo Switch Lineup</li>
-                       <li>Accessories</li>
-                       <li>amiibo</li>
-                   </ul>
-               </li>
-               <li>News & Events</li>
-               <li>Play Nintendo</li>
-           </ul> 
+            <div class="uppermenu">
+                <div class="uppermenu-cnt" id="logo">
+                    <img src="assets/logo.png" alt="">
+                </div>
+                <div class="uppermenu-cnt" id="search-cnt">
+                    <div class="search-box">
+                        <span>
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="search" name="search" id="search" placeholder="Search games, systems, support, etc.">
+                    </div>
+                </div>
+                <div class="uppermenu-cnt" id="links-right">
+                    <span><a href="#"><i class="fas fa-question-circle"></i>Support</a></span>
+                    <span><a href="#"><i class="fas fa-heart"></i>Wish&nbspList</a></span>
+                    <span><a href="#"><i class="fas fa-user"></i>Log&nbspin / Sign&nbspup</a></span>
+                </div>
+            </div>
+            <div class="bottomenu">
+                <div class="dropdown">
+                    <button class="dropdown-btn"><i class="fa fa-dice"></i>Games<span class="arrow-down">
+                        <i class="fas fa-chevron-down"></i>
+                    </span></button>
+                    <div class="submenu-cnt">
+                        <div class="sub-item">Shop games</div>
+                        <div class="sub-item">Sales and deals</div>
+                        <div class="sub-item">Coming soon</div>
+                        <div class="sub-item">Online services</div>
+                        <div class="sub-item">Mobile games</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn"><i class="fa fa-gamepad"></i>Hardware<span class="arrow-down"><i class="fas fa-chevron-down"></i></span></button>
+                    <div class="submenu-cnt">
+                        <div class="sub-item">Nintendo Switch Lineup</div>
+                        <div class="sub-item">Accessories</div>
+                        <div class="sub-item">amiibo</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="dropdown-btn" href="#"><i class="fa fa-message"></i>News & Events</a>
+                </div>
+                <div class="dropdown">
+                    <a class="dropdown-btn" href="#"><i class="fa fa-star"></i>Play Nintendo</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main>  
@@ -45,7 +70,7 @@
                 <img src="assets/switch-logo.webp" alt="logo del switch">
                 <nav>
                     <ul>
-                        <li>Nintendo Switch – OLED Model</li>
+                        <li>Nintendo Switch - OLED Model</li>
                         <li>Nintendo Switch</li>
                         <li>Nintendo Switch Lite</li>
                         <li>Nintendo Switch Online</li>
@@ -151,64 +176,80 @@
         <p>* Manufacturer’s Suggested Retail Price, actual price may vary. See retailer for details.</p>
     </main>
     <footer>
-        <section>
-            <ul>Nintendo Switch Lineup
-                <li>Nintendo Switch – OLED Model</li>
-                <li>Nintendo Switch Lite</li>
-                <li>Compare Systems</li>
-                <li>Technical Specs</li>
-                <li>Nintendo Switch Games</li>
-                <li>Where to Buy</li>
-            </ul>
-            <ul>Explore More
-                    <li>Joy-Con Colors</li>
-                    <li>Accessories</li>
-                    <li>Parental Controls</li>
-                    <li>Nintendo Switch FAQ</li>
+        <section class="footer-up-section">
+            <div class="footer-up-cnt">
+                <ul class="about">
+                    About Nintendo
+                    <li><a href="#">Info</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">CSR Report</a></li>
+                    <li><a href="#">IP Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
                 </ul>
-            
-            <ul>Online Service
-                <li>Plans & Pricing</li>
-                <li>FAQ</li>
-                <li>Smartphone App</li>
-                <li>NES - Nintendo Switch Online</li>
-            </ul>
-            <ul>
-                parents
-                <li>Info for Parents</li>
-                <li>Parental Controls</li>
-            </ul>
-            <ul>
-                Nintendo Switch Support
-                <li>Warranty</li>
-                <li>System Update</li>
-                <li>System Set-Up</li>
-                <li>Parental Controls</li>
-                <li>Connect to the Internet</li>
-                <li>Applications & Services</li>
-                <li>Repair</li>
-            </ul>
-                <ul>
-                    Health & Safety/Privacy
-                    <li>Health & Safety Precautions Manuals</li>
-                    <li>Cookies and Interest-Based ads</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms of Use</li>
-                    <li>Documents and Policies</li>
+                <ul class="where">
+                    Where to Buy
+                    <li><a href="#">Game Store</a></li>
+                    <li><a href="#">Nintendo NY</a></li>
+                    <li><a href="#">Nintendo Store</a></li>
+                    <li><a href="#">Online Retailers</a></li>
                 </ul>
-               <div><strong><a href="change language">Change region</a></strong></div>
-            </section>
-            <hr>
-            <section>
+                <ul class="support">
+                    Support
+                    <li><a href="#">Health & Safety Precautions</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Nintendo Switch</a></li>
+                    <li><a href="#">Nintendo 3DS</a></li>
+                    <li><a href="#">Repair</a></li>
+                    <li><a href="#">Nintendo Product Recycling</a></li>
+                </ul>
+                <ul class="parents">
+                    Parents
+                    <li><a href="#">Info for Parents</a></li>
+                    <li><a href="#">Parental Controls</a></li>
+                </ul>
+                <ul class="communuty">
+                    Community
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Online Safety Principles</a></li>
+                </ul>
+                <ul class="privacy">
+                    Privacy
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Cookies and Interest-Based ads</a></li>
+                </ul>
+                <ul class="legal">
+                    Legal
+                    <li><a href="#">Documents and Policies</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+                <div><strong><a href="change language">Change region <img src="assets/us-flag.svg" alt=""></a></strong></div>
+            </div>
+        </section>
+        <section class="footer-bottom-section">
+            <div class="flex-icons">
                 <div>
-                    Contact Us <span>Website Feedback</span>
+                    <div>
+                        <a href="#">Contact Us </a><a href="#">Website Feedback</a>
+                    </div>
+                    <span class="footer-icon blue">
+                        <i class="fab fa-facebook"></i>
+                    </span>
+                    <span class="footer-icon pink">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                    <span class="footer-icon sky">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <span class="footer-icon red">
+                        <i class="fab fa-youtube"></i>
+                    </span>
                 </div>
-                <div>
-                    (icone)
-                </div>
-                <p>© 2022 Nintendo. Games are property of their respective owners. <br>
-                    Nintendo of America Inc. | Headquarters are in Redmond, Washington, USA | Support</p>
-            </section>
+            </div>
+            <p>
+                © 2022 Nintendo. Games are property of their respective owners. <br>
+                Nintendo of America Inc. | Headquarters are in Redmond, Washington, USA | Support
+            </p>
+        </section>
     </footer>
 </body>
 </html>
