@@ -44,11 +44,11 @@ h3 {
     font-size: 1.3rem;
 }
 
-a .fas, button .fas {
+a .fas {
     margin-right: 10px;
 }
 
-a .fa-chevron-right, button .fa-chevron-right {
+a .fa-chevron-right {
     margin-left: 10px;
 }
 
@@ -203,6 +203,10 @@ nav {
     font-weight: bold;
 }
 
+.dropdown-btn .fa {
+    margin-right: 5px;
+}
+
 .dropdown:focus-within .submenu-cnt {
     display: flex;
     justify-content: center;
@@ -221,6 +225,8 @@ nav {
 }
 
 .submenu-cnt {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     position: absolute;
     left: 0;
     width: 100%;
@@ -228,15 +234,39 @@ nav {
     background-color: rgba(255, 255, 255, 0.9);
     border-top: 1px solid #ddd;
     padding: 10px;
+    align-items: center;
 }
 
 .sub-item {
     margin:  5px 8px;
-    padding: 20px 40px;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 20px 40px; */
+    /* border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white; */
+}
+
+.sub-menu-icon {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: white;
+    padding: 10px 20px;
+    overflow: hidden;
 }
+
+.sub-menu-icon:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+ 
+.sub-menu-icon img {
+    height: 50px;
+} 
 
 /* MAIN */
 
