@@ -1,292 +1,482 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="icon" href="http://www.nintendo.com/apps/noa/images/favicon.ico?v=2022012117">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Nintendo - Official Site - Video Game Consoles, Games - Nintendo - Official Site</title>
 </head>
 <body>
     <header>
             <nav>
-                <div>
-                    <span><a href="#home">Nintendo</a></span>
-                    <span><input type="search" name="search" id="search" placeholder="Search games, systems, support, etc."></span>
-                    <span><button><a href="#">Support</a></button></span>
-                    <span><button><a href="#">Wish List</a></button></span>
-                    <span><button><a href="#">Log in/Sign up</a></button></span>
+                <div class="uppermenu">
+                    <div class="uppermenu-cnt" id="logo">
+                        <img src="assets/logo.png" alt="logo Nintendo">
+                    </div>
+                    <div class="uppermenu-cnt" id="search-cnt">
+
+                        <div class="search-box">
+                            <span>
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="search" name="search" id="search" placeholder="Search games, systems, support, etc.">
+                        </div>
+                    </div>
+                    <div class="uppermenu-cnt" id="links-right">
+                        <span><a href="#"><i class="fas fa-question-circle"></i>Support</a></span>
+                        <span><a href="#"><i class="fas fa-heart"></i>Wish&nbspList</a></span>
+                        <span><a href="#"><i class="fas fa-user"></i>Log&nbspin / Sign&nbspup</a></span>
+                    </div>
                 </div>
-             <hr>
-             <div>
-                <ul>
-                    <li>Games
-                        <ul>
-                            <li>Shop games</li>
-                            <li>Sales and deals</li>
-                            <li>Coming soon</li>
-                            <li>Online services</li>
-                            <li>Mobile games</li>
-                        </ul>
-                    </li>
-                    <li>Hardware
-                        <ul>
-                            <li>Nintendo Switch Lineup</li>
-                            <li>Accessories</li>
-                            <li>amiibo</li>
-                        </ul>
-                    </li>
-                    <li>News & Events</li>
-                    <li>Play Nintendo</li>
-                </ul> 
-             </div>
+
+                <div class="bottomenu">
+                    <div class="dropdown">
+                        <button class="dropdown-btn"><i class="fa fa-dice"></i>Games
+                            <span class="arrow-down">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div class="submenu-cnt">
+                            <div class="sub-item">
+                                <div class="sub-menu-icon">
+                                    <i class="fa fa-dice"></i>
+                                </div>
+                                <span>Shop games</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-menu-icon">
+                                    <i class="fa-solid fa-tag"></i>
+                                </div>
+                                <span>Sales and deals</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-menu-icon">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+                                <span>Coming soon</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-menu-icon">
+                                    <i class="fa-solid fa-earth-americas"></i>
+                                </div>
+                                <span>Online services</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-menu-icon">
+                                    <i class="fa-solid fa-mobile"></i>
+                                </div>
+                                <span>Mobile games</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-btn"><i class="fa fa-gamepad"></i>Hardware
+                            <span class="arrow-down">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div class="submenu-cnt">
+                            <div class="sub-item">
+                                <div class="sub-item">
+                                    <div class="sub-menu-icon">
+                                        <img src="assets/switch-lineup.avif" alt="">
+                                    </div>
+                                    <span>Nintendo Switch Lineup</span> 
+                                </div>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-menu-icon">
+                                    <img src="assets/accessories.avif" alt="">
+                                </div>
+                                <span>Accessories</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-menu-icon">
+                                    <img src="assets/amiibo.avif" alt="">
+                                </div>
+                                <span>amiibo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-btn" href="#"><i class="fa fa-message"></i>News & Events</a>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-btn" href="#"><i class="fa fa-star"></i>Play Nintendo</a>
+                    </div>
+                </div>
             </nav>
      </header>
-    <main>
-        <section>
-            <picture>
-                <img src="assets/Ncom_1366x493_desktop_pkmn_arceus.jpg" alt="protagonisti che fissano il vesuvio"
-                width="auto"
-                height="400">            
-            </picture>
-            <h1 style="display:inline">Pre-order digitally-Play at launch</h1>
-            <button>Learn more ></button>
-        </section>
-        <hr>
-        <section>
-            <div>
-                <img src="assets/hero kirby.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
-            </div>
-            <div>
-                <img src="assets/brain.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
-            </div>
-            <div>
-                <img src="assets/triangle.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
-            </div>
-            <div>
-                <img src="assets/metroid.jpg" alt="Kirby è maschio addio infanzia"
-                width="257"
-                height="145">
-                <h3>Kirby and the Forgotten Land - Pre-order now</h3>
-                <span><u>Nintendo Switch</u></span>
-                <hr>
-            </div>
-        </section>
-        <hr>
-        <section>
-          <picture>
-              <img src="assets/Game_Store_Switch_Games.png" alt="compra i nostri joy-con fasani">
-          </picture>  
-          <h2 style="display: inline;">Game Store: Buy, download, and play right away!</h2>
-          <button>Shop games ></button>
-        </section>
-        <hr>
-        <section>
-            <h1>Explore gaming systems</h1>
-            <picture>
-                <img src="assets/2296x680_ExploreGamingSystems.jpg" alt="la Switch lite non ha senso"
-                width="800"
-                height="auto">
-            </picture>
 
-            <h2 style="display: inline;">Nintendo Switch family - Three ways to play</h2>
-            <button>
-                Starting at $199.99 MSRP*</button>
+    <main>
+        <section class="main-section">
+            <div class="main-img">
+            	<img src="assets/Ncom_1366x493_desktop_pkmn_arceus.jpg" alt="leggende Pokémon™ Sfondo">
+            </div>
+            <div class="banner">
+                <h1>Pre-order digitally-Play at launch</h1>
+                <div class="btn-cnt"><a class="btn" href="#">Learn more<i class="fas fa-chevron-right"></i></a></div>
+            </div>
+        </section>
+        <hr>
+        <section class="tiles-section">
+            <div class="scroll-btn-cnt" id="left">
+                <a href="#start"><i class="fas fa-chevron-left"></i></a>
+            </div>
+            <div class="tiles-cnt">
+                <span id="start"></span>
+                <div class="tile">
+                    <picture>     
+                        <a href="#"><img src="assets/hero kirby.jpg" alt="Kirby in assetto eroico"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <picture>
+                        <a href="#"><img src="assets/brain.jpg" alt="Sfondo Brain Academy"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Big Brain Academy - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <picture>
+                        <a href="#"><img src="assets/triangle.jpg" alt="Sfondo triangle strategy"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Triangle Strategy - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <picture>
+                        <a href="#"><img src="assets/metroid.jpg" alt="Samus in assetto di guerra"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Metroid Dread - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <picture>
+                        <a href="#"><img src="assets/hero kirby.jpg" alt="Sempre Kirby eroico"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <picture>
+                        <a href="#"><img src="assets/hero kirby.jpg" alt="Sempre Kirby eroico"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <picture>
+                        <a href="#"><img src="assets/hero kirby.jpg" alt="Sempre Kirby eroico"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <picture>
+                        <a href="#"><img src="assets/hero kirby.jpg" alt="Sempre Kirby eroico"></a>
+                    </picture>
+                    <div>
+                        <h3><a href="#">Kirby and the Forgotten Land - Pre-order now</a></h3>
+                    </div>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                    <span id="end"></span>
+                </div>
+            </div>
+            <div class="scroll-btn-cnt" id="right">
+                <a href="#end"><i class="fas fa-chevron-right"></i></a>
+            </div>
         </section>
         <hr>
         <section>
+            <div class="grid-shop">
+                <picture>
+                    <img class="no-filter" src="assets/Game_Store_Switch_Games.png" alt="Sagoma di un pad Switch">
+                </picture>
+                <div class="banner">
+                  <h2>Game Store: Buy, download, and play right away!</h2>
+                </div>          
+                <div class="btn-cnt">
+                    <a class="btn" href="#">Shop games<i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <section class="explore-section">
+            <h2>Explore gaming systems</h2>
+            <div class="grid-explore">
+                <picture>
+                    <img class="no-filter" src="assets/2296x680_ExploreGamingSystems.jpg" alt="3 console della famiglia Switch">
+                </picture>
+                <h2>Nintendo Switch family - Three ways to play</h2>
+                <div class="btn-cnt">
+                    <a class="btn" href="#">Starting at $199.99 MSRP*<i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="news-section">
             <h2>News</h2>
-        
-            <article>
-                <picture>
-                    <img src="assets/news1.jpg" alt="banjo-kanzooie">
-                </picture>
-                    <figcaption>01/20/22</figcaption>
-                    <h3>Banjo-Kazooie Arrives on Nintendo Switch Online + Expansion Pack Today, With The Legend of Zelda: Majora’s Mask Up Next</h3>
-                    <p>Banjo and Kazooie and … Link?! No matter what form your favorite heroes take, adventures both hilarious and perilous are ahead when Banjo-Kazooie™ and The Legend of Zelda™: Majora’s Mask™ make their way to the Nintendo Switch™ system!</p>
-                    <button>Read more ></button>
-            </article>
-            <article>
-                <picture>
-                    <img src="assets/news2.jpg" alt="banjo-kanzooie">
-                </picture>
-                    <figcaption>01/19/22</figcaption>
-                    <h3>BPut your deck-building skills to the test with these card battle games</h3>
-                    <p> Card-based battles can take on a new and interesting life in a video game. Each of the following games features deep strategy, imaginative art, and a clever use of, well, cards!</p>
-                    <button>Read more ></button>
-            </article>
-            <article>
-                <picture>
-                    <img src="assets/mininews1.jpg" alt="" width="250">
-                </picture>
-                <figcaption>01/18/22</figcaption>
-                <h3>Play the 28th MAXIMUS CUP online event and you could earn an in-game collaborative theme</h3>
-                <button>Read more ></button>
-            </article>
-            <article>
-                <picture>
-                    <img src="assets/mininews2.jpg" alt="" width="250">
-                </picture>
-                <figcaption>01/13/22</figcaption>
-                <h3>Explore and reshape distant worlds in Astroneer</h3>
-                <button>Read more ></button>
-            </article>
-            <article>
-                <picture>
-                    <img src="assets/mininews3.jpg" alt="" width="250">
-                </picture>
-                <figcaption>01/12/22</figcaption>
-                <h3>Explore a mysterious world with Kirby and the Forgotten Land on March 25</h3>
-                <button>Read more ></button>
-            </article>
-            <article>
-                <picture>
-                    <img src="assets/mininews4.jpg" alt="" width="250">
-                </picture>
-                <figcaption>01/12/22</figcaption>
-                <h3>Race the Lion City in the Singapore Tour</h3>
-                <button>Read more ></button>
-            </article>
-            <button>See all news articles ></button>
-        </section>
-        <hr>
-        <section>
-            <h2 style="display: inline;">Nintendo Switch new releases</h2>
-            <button>See full list ></button>
-            <div>
-               <img src="assets/astroneer.jpg" alt="compralo e facci felici">
-               <p>01/28/22</p> 
-               <h3>Pokémon™ Legends: Arceus</h3>
-               <h3>$59.99</h3>
-               <span><u>Nintendo Switch</u></span>
+            <div class="grid-cnt-news">
+                <article class="big-news">
+                    <picture>
+                        <img src="assets/news1.jpg" alt="banjo-kanzooie">
+                    </picture>
+                        <figcaption>01/20/22</figcaption>
+                        <h3><a href="#">Arrives on Nintendo Switch Online + Expansion Pack Today, With The Legend of Zelda: Majora’s Mask Up Next</a></h3>
+                        <p>Banjo and Kazooie and … Link?! No matter what form your favorite heroes take, adventures both hilarious and perilous are ahead when Banjo-Kazooie™ and The Legend of Zelda™: Majora’s Mask™ make their way to the Nintendo Switch™ system!</p>
+                        <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>
+                </article>
+                <article class="big-news">
+                    <picture>
+                        <img src="assets/news2.jpg" alt="Card-based battle">
+                    </picture>
+                        <figcaption>01/19/22</figcaption>
+                        <h3><a href="#">Put your deck-building skills to the test with these card battle games</a></h3>
+                        <p> Card-based battles can take on a new and interesting life in a video game. Each of the following games features deep strategy, imaginative art, and a clever use of, well, cards!</p>
+                        <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>
+                </article>
+                <article class="small-news">
+                    <picture>
+                        <img src="assets/mininews1.jpg" alt="immagine del tetris in versione leggende Pokémon™">
+                    </picture>
+                    <figcaption>01/18/22</figcaption>
+                    <h3><a href="#">Play the 28th MAXIMUS CUP online event and you could earn an in-game collaborative theme</a></h3>
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>  
+                </article>
+                <article class="small-news">
+                    <picture>
+                        <img src="assets/mininews2.jpg" alt="Sfondo di Astroneer">
+                    </picture>
+                    <figcaption>01/13/22</figcaption>
+                    <h3><a href="#">Explore and reshape distant worlds in Astroneer</a></h3>
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>                
+                </article>
+                <article class="small-news">
+                    <picture>
+                        <img src="assets/mininews3.jpg" alt="Sfondo di Kirby">
+                    </picture>
+                    <figcaption>01/12/22</figcaption>
+                    <h3><a href="#">Explore a mysterious world with Kirby and the Forgotten Land on March 25</a></h3>
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>                
+                </article>
+                <article class="small-news">
+                    <picture>
+                        <img src="assets/mininews4.jpg" alt="Luigi che trionfa">
+                    </picture>
+                    <figcaption>01/12/22</figcaption>
+                    <h3><a href="#">Race the Lion City in the Singapore Tour</a></h3>
+                    <a class="link-borderless" href="#">Read more<i class="fas fa-chevron-right"></i></a>                     
+                </article>
             </div>
-            <div>
-                <img src="assets/bayonetta.jpg" alt="compralo e facci felici">
-                <p>01/28/22</p> 
-                <h3>Pokémon™ Legends: Arceus</h3>
-                <h3>$59.99</h3>
-                <span><u>Nintendo Switch</u></span>
-             </div>
-             <div>
-                <img src="assets/dungeon2.jpg" alt="compralo e facci felici">
-                <p>01/28/22</p> 
-                <h3>Pokémon™ Legends: Arceus</h3>
-                <h3>$59.99</h3>
-                <span><u>Nintendo Switch</u></span>
-             </div>
-             <div>
-                <img src="assets/timelie.jpg" alt="compralo e facci felici">
-                <p>01/28/22</p> 
-                <h3>Pokémon™ Legends: Arceus</h3>
-                <h3>$59.99</h3>
-                <span><u>Nintendo Switch</u></span>
-             </div>
+            <div class="flex-btn-cnt">
+                <div class="btn-cnt"><a class="btn" href="#">See all news<i class="fas fa-chevron-right"></i></a></div> 
+            </div>
         </section>
         <hr>
-        <section>
+        <section class="releases-section">
+            <div class="flex-releases-title">
+                <h2>Nintendo Switch new releases</h2>
+                <h3><a class="link-borderless" href="#">See full list<i class="fas fa-chevron-right"></i></a></h3>
+            </div>
+            <div class="tiles-cnt">
+                <div class="tile">
+                    <picture>
+                        <img src="assets/astroneer.jpg" alt="Astroneer uscita">
+                    </picture>
+                    <p>01/28/22</p>
+                    <h3><a href="#">ASTRONEER</a></h3>
+                    <h3>$59.99</h3>
+                    <div class="subtitle">
+                        <span>Nintendo Switch</span>
+                    </div>
+                 </div>
+                 <div class="tile">
+                     <picture>
+                        <img src="assets/bayonetta.jpg" alt="Bayonetta collezione">
+                     </picture>
+                     <p>01/28/22</p>
+                     <h3><a href="#">Bayonetta™ and Bayonetta™ 2 Digital Bundle</a></h3>
+                     <h3>$59.99</h3>
+                     <div class="subtitle">
+                         <span>Nintendo Switch</span>
+                     </div>
+                  </div>
+                  <div class="tile">
+                      <picture>
+                        <img src="assets/dungeon2.jpg" alt="Dungeon Munchies uscita">
+                      </picture>
+                     <p>01/28/22</p>
+                     <h3><a href="#">Dungeon Munchies</a></h3>
+                     <h3>$59.99</h3>
+                     <div class="subtitle">
+                         <span>Nintendo Switch</span>
+                     </div>
+                  </div>
+                  <div class="tile">
+                      <picture>
+                        <img src="assets/timelie.jpg" alt="Timelie uscita">
+                      </picture>
+                     <p>01/28/22</p>
+                     <h3><a href="#">Timelie</a></h3>
+                     <h3>$59.99</h3>
+                     <div class="subtitle">
+                         <span>Nintendo Switch</span>
+                     </div>
+                  </div>
+            </div>
+            
+        </section>
+        <hr>
+        <section class="character-section">
             <h2>Characters</h2>
-            <div>
-                <picture>
-                    <img src="assets/mario-fg.jpg" alt="">
-                </picture>
-                <figcaption>Mario</figcaption>
-            </div>
-            <div>
-                <picture>
-                    <img src="assets/zelda-fg.jpg" alt="">
-                </picture>
-                <figcaption>The Legend of Zelda™</figcaption>
-            </div>
-            <div>
-                <picture>
-                    <img src="assets/Animal_Crossing_A_characters.jpg" alt="">
-                </picture>
-                <figcaption>Animal Crossing</figcaption>
-            </div>
-            <div>
-                <picture>
-                    <img src="assets/Kirby_B_character.jpg" alt="">
-                </picture>
-                <figcaption>Kirby</figcaption>
-            </div>
-        </section>
-        <p>*MSRP: Manufacturer's Retail Price. Actual price may vary. See retailer for details. </p>
-    </main>
-    <footer>
-        <section>
-            <span>
-                <ul>
-                    About Nintendo
-                <li>Company Info</li>
-                <li>Careers</li>
-                <li>CSR Report</li>
-                <li>IP Policy</li>
-                <li>Sitemap</li>
-            </ul>
-            </span>
-            <span>
-                <ul>
-                    Where to Buy
-                    <li>Game Store</li>
-                    <li>Nintendo NY</li>
-                    <li>Nintendo Store</li>
-                    <li>Online Retailers</li>
-                </ul>
-            </span>
-            <ul>
-                Support
-                <li>Health & Safety Precautions</li>
-                <li>Warranty</li>
-                <li>Nintendo Switch</li>
-                <li>Nintendo 3DS</li>
-                <li>Repair</li>
-                <li>Nintendo Product Recycling</li>
-            </ul>
-            <ul>
-                Parents
-                <li>Info for Parents</li>
-                <li>Parental Controls</li>
-            </ul>
-            <ul>
-                Community
-                <li>Community Guidelines</li>
-                <li>Online Safety Principles</li>
-            </ul>
-                <ul>
-                    Privacy
-                    <li>Policy</li>
-                    <li>Cookies and Interest-Based ads</li>
-                </ul>
-                <ul>
-                    Legal
-                    <li>Documents and Policies</li>
-                    <li>Terms of Use</li>
-                </ul>
-                <div><strong><a href="change language">Change region</a></strong></div>
-            </section>
-            <hr>
-            <section>
+            <div class="character-flex">
                 <div>
-                    Contact Us <span>Website Feedback</span>
+                    <div class="mario">
+                        <picture>
+                            <img src="assets/mario-fg.jpg" alt="Figura Mario">
+                        </picture>
+                    </div>      
+                    <figcaption>Mario</figcaption>
                 </div>
                 <div>
-                    (icone)
+                    <div class="zelda">
+                        <picture>
+                            <img src="assets/zelda-fg.jpg" alt="Figura Link">
+                        </picture>
+                    </div>
+                    <figcaption>The Legend of Zelda™</figcaption>
+                </div>
+                <div>
+                    <div class="animal-crossing">
+                        <picture>
+                            <img src="assets/Animal_Crossing_A_characters.jpg" alt="Figura Animal Crossing">
+                        </picture>
+                    </div>
+                    <figcaption>Animal Crossing</figcaption>
+                </div>
+                <div>
+                    <div class="kirby">
+                        <picture>
+                            <img src="assets/Kirby_B_character.jpg" alt="Figura Kirby">
+                        </picture>
+                    </div>
+                    <figcaption>Kirby</figcaption>
+                </div>
+            </div>
+            <p>*MSRP: Manufacturer's Retail Price. Actual price may vary. See retailer for details.</p>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-up-section">
+            <div class="footer-up-cnt">
+                <ul class="about">
+                    About Nintendo
+                <li><a href="#">Info</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">CSR Report</a></li>
+                <li><a href="#">IP Policy</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+            <ul class="where">
+                Where to Buy
+                <li><a href="#">Game Store</a></li>
+                <li><a href="#">Nintendo NY</a></li>
+                <li><a href="#">Nintendo Store</a></li>
+                <li><a href="#">Online Retailers</a></li>
+            </ul>
+            <ul class="support">
+                Support
+                <li><a href="#">Health & Safety Precautions</a></li>
+                <li><a href="#">Warranty</a></li>
+                <li><a href="#">Nintendo Switch</a></li>
+                <li><a href="#">Nintendo 3DS</a></li>
+                <li><a href="#">Repair</a></li>
+                <li><a href="#">Nintendo Product Recycling</a></li>
+            </ul>
+            <ul class="parents">
+                Parents
+                <li><a href="#">Info for Parents</a></li>
+                <li><a href="#">Parental Controls</a></li>
+            </ul>
+            <ul class="communuty">
+                Community
+                <li><a href="#">Community Guidelines</a></li>
+                <li><a href="#">Online Safety Principles</a></li>
+            </ul>
+            <ul class="privacy">
+                Privacy
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Cookies and Interest-Based ads</a></li>
+            </ul>
+            <ul class="legal">
+                Legal
+                <li><a href="#">Documents and Policies</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+            <div><strong><a href="change language">Change region <img src="assets/us-flag.svg" alt="Bandierina USA"></a></strong></div>
+
+            </div>
+
+            </section>
+            <section class="footer-bottom-section">
+                <div class="flex-icons">
+                    <div>
+                        <div>
+                            <a href="#">Contact Us </a><a href="#">Website Feedback</a>
+                        </div>
+                        <span class="footer-icon blue">
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                        <span class="footer-icon pink">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <span class="footer-icon sky">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span class="footer-icon red">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                    </div>
                 </div>
                 <p>© 2022 Nintendo. Games are property of their respective owners. <br>
                     Nintendo of America Inc. | Headquarters are in Redmond, Washington, USA | Support</p>
