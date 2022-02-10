@@ -203,6 +203,10 @@ nav {
     font-weight: bold;
 }
 
+.dropdown-btn .fa {
+    margin-right: 5px;
+}
+
 .dropdown:focus-within .submenu-cnt {
     display: flex;
     justify-content: center;
@@ -221,6 +225,8 @@ nav {
 }
 
 .submenu-cnt {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     position: absolute;
     left: 0;
     width: 100%;
@@ -228,15 +234,39 @@ nav {
     background-color: rgba(255, 255, 255, 0.9);
     border-top: 1px solid #ddd;
     padding: 10px;
+    align-items: center;
 }
 
 .sub-item {
     margin:  5px 8px;
-    padding: 20px 40px;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 20px 40px; */
+    /* border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white; */
+}
+
+.sub-menu-icon {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: white;
+    padding: 10px 20px;
+    overflow: hidden;
 }
+
+.sub-menu-icon:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+ 
+.sub-menu-icon img {
+    height: 50px;
+} 
 
 /* MAIN */
 
@@ -371,6 +401,45 @@ article img, .tiles-cnt img {
     line-height: 1.3;
     color: #ffffff;
     font-weight: bolder;
+}
+
+.switch-lite-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.img-L{
+    width: 100%;
+    margin-right: 10px;
+}
+
+.img-L img{
+    max-width: 100%;
+}
+
+.img-R{
+    width: 100%;
+    background-image: linear-gradient(180deg,#eaeaea 0,#fafafa 100%);
+    margin-left: 10px;
+}
+.img-R img{
+    max-width: 100%;
+}
+
+.img-R .transparent-lite span{
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #484848;
+    font-weight: bolder;
+}
+
+.img-R .transparent-lite div{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
