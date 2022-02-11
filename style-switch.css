@@ -285,6 +285,7 @@ nav {
 .btn-cnt:hover {
     transform:scale(1.1);
     background-color: var(--main-color-hover);
+    cursor: pointer;
 }
 
 .btn {
@@ -297,6 +298,7 @@ nav {
 
 .btn:hover {
     color: white;
+    cursor: pointer;
 }
 
 .btn .fas {
@@ -440,6 +442,142 @@ article img, .tiles-cnt img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.sys-gam-acc{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.system-up{
+    grid-column: span 2;
+    height: 135px;
+}
+
+.system-up span, .system-up a{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.upper-img-box img, .left-img-box img, .right-img-box img{
+    max-width: 100%;
+}
+
+.upper-img-box, .left-img-box, .right-img-box{
+    width: 45%;
+}
+
+.gam-acc-right{
+    grid-column: span 1;
+    margin: 5px;
+}
+
+.gam-acc-left{
+    grid-column: span 1;
+    margin: 5px;
+}
+
+.system-up, .gam-acc-left, .gam-acc-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.text-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+.text-link-up a{
+    font-size: 1rem;
+}
+
+.text-link-up span{
+    font-size: 1rem;
+}
+.text-link a{
+    font-size: 1rem;
+}
+
+.text-link span{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.switch-online{
+    background: #e60012;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.switch-online span{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.switch-online a{
+    color: #e60012;
+    background: #fff;
+}
+
+.switch-online a:hover{
+    color: #e60012;
+    background: #fff;
+    cursor: pointer;
+    border: 0.5px solid black;
+}
+
+.o-img-box img{
+    max-width: 100%;
+}
+
+.o-img-box{
+   width: 35%;
+}
+
+.nso-img-box img{
+    max-width: 100%;
+}
+
+.nso-img-box{
+   width: 35%;
+}
+
+.parental-controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-image:linear-gradient(180deg, #FEEAB0 0%, #FFFCF3 100%);
+    margin: 20px auto;
+}
+
+.pc-img-box img{
+    max-width: 100%;
+}
+.pc-img-box{
+    width: 35%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.pc-img-box span{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 
